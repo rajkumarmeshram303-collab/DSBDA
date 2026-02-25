@@ -1,0 +1,68 @@
+>>> import pandas as pd
+>>> x=pd.DataFrame({'RollNo':[101,102,103,104],'Name':['a','b','c','d']},index=[1,2,3,4],columns=['RollNo','Name'])
+>>> print(x)
+   RollNo Name
+1     101    a
+2     102    b
+3     103    c
+4     104    d
+>>> x.info()
+<class 'pandas.core.frame.DataFrame'>
+Index: 4 entries, 1 to 4
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   RollNo  4 non-null      int64
+ 1   Name    4 non-null      object
+dtypes: int64(1), object(1)
+memory usage: 96.0+ bytes
+>>> x.describe()
+           RollNo
+count    4.000000
+mean   102.500000
+std      1.290994
+min    101.000000
+25%    101.750000
+50%    102.500000
+75%    103.250000
+max    104.000000
+>>> x.duplicated()
+1    False
+2    False
+3    False
+4    False
+dtype: bool
+>>> x.head()
+   RollNo Name
+1     101    a
+2     102    b
+3     103    c
+4     104    d
+>>> x.head(2)
+   RollNo Name
+1     101    a
+2     102    b
+>>> x.tail()
+   RollNo Name
+1     101    a
+2     102    b
+3     103    c
+4     104    d
+>>> x.tail(3)
+   RollNo Name
+2     102    b
+3     103    c
+4     104    d
+>>> x.isnull()
+   RollNo   Name
+1   False  False
+2   False  False
+3   False  False
+4   False  False
+>>> x.notnull()
+   RollNo  Name
+1    True  True
+2    True  True
+3    True  True
+4    True  True
+>>>
